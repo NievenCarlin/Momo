@@ -1,0 +1,259 @@
+/*
+#ec0000	(236,0,0)
+#ec2400	(236,36,0)
+#ec5300	(236,83,0)
+#ec9b00	(236,155,0)
+#ecca00	(236,202,0)
+*/
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 1.5% 3% 1.5% 3%;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.2);
+}
+
+header .logodepan h1 {
+  color: #ec0000;
+  font-size: 50px;
+  margin-right: 100px;
+}
+
+header nav ul li{
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 40px;
+}
+
+header nav ul li a{
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+
+header nav ul li a:after{
+  content: "";
+  position: absolute;
+  background-color: #ec5300;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover:after{
+  width: 100%;
+}
+
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 0;
+}
+
+.home .kontenKiri {
+  background-image: url("beranda4.png");
+  width: 1350px;
+  height: 650px;
+  margin-top: 7.5%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.home .kontenKiri .homeMomo {
+  color: white;
+}
+.home .kontenKiri h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.home .kontenKiri p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+  color: lightgray;
+  text-align: center;
+}
+
+.about h1 {
+  margin-left: 5%;
+  margin-top: 6%;
+  margin-bottom: 3%;
+  color: #ec5300;
+  font-size: 40px;
+}
+
+.about p {
+  margin-left: 5%;
+  margin-right: 50%;
+  text-align: justify;
+  font-size: 142%;
+}
+
+.about img {
+  width: 550px;
+  margin-right: 5%;
+  float: right;
+  margin-left: 10px;
+  border-radius: 5%;
+}
+
+.order h1 {
+  margin-top: 20%;
+  text-align: center;
+  color: white;
+  background-color: darkred;
+  padding-bottom: 20%;
+  padding-top: 14%;
+  font-size: 40px;
+}
+
+.order img {
+  margin: 6% 4% 0% 6%;
+  width: 12%;
+  align-items: center;
+}
+
+.order .deskripsi .judul {
+  font-size: 22px;
+  display: inline;
+  margin: 2% 2%;
+}
+
+.menu{
+  margin-bottom: 150px;
+}
+
+.menu h1{
+  font-size: 40px;
+  text-align: center;
+  color: #ec5300;
+  margin: 100px 0px 50px 0px;
+}
+
+.menu .product{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 30px 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+
+.menu .product .item img:hover{
+  opacity: 0.7;
+}
+
+.menu .product .item img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu .product .item h4{
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.menu .product .item p{
+  font-size: 17px;
+  margin: 5px 0;
+  text-align: right;
+  color: green;
+  font-weight: bolder;
+}
+
+.menu .product div{
+  border: 1px solid lightgrey;
+  padding: 8px;
+}
+
+.gallery h1 {
+  color: #ec5300;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.gallery .isiGallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gallery .isiGallery .kolom {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.gallery .isiGallery .kolom img {
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.gallery img:hover {
+  opacity: 0.7;
+}
+
+.foot {
+  background-color: darkred;
+  color: white;
+  padding-left: 3%;
+  display: flex;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  margin-top: 10%;
+}
+.foot p {
+  margin-bottom: 6%;
+}
+
+.foot .part2 {
+  margin-left: 12%;
+}
+
+.foot .part3 {
+  margin-left: 12%;
+}
+
+.foot .part4 {
+  margin-left: 12%;
+}
+
+.foot img {
+  width: 35px;
+}
