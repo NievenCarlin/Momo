@@ -31,7 +31,7 @@ nav {
 }
 
 nav img {
-  width: 63%;
+  width: 50%;
 }
 
 nav h1 {
@@ -83,7 +83,7 @@ header nav ul li a:hover:after {
 }
 
 .home .kontenKiri {
-  background-image: url("beranda4.png");
+  background-image: url("assets/beranda4.png");
   margin-top: 7.5%;
   width: 1350px;
   height: 650px;
@@ -119,6 +119,7 @@ header nav ul li a:hover:after {
   color: #ec5300;
   font-size: 40px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about .container p{
@@ -133,7 +134,7 @@ header nav ul li a:hover:after {
   margin-left: 10%;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  width: 70%;
+  width: 75%;
 }
 
 .container p:first-child {
@@ -158,6 +159,10 @@ header nav ul li a:hover:after {
   border-radius: 5%;
 } */
 
+.about img{
+  border-radius: 5%;
+}
+    
 .order h1 {
   margin-top: 22%;
   text-align: center;
@@ -166,6 +171,7 @@ header nav ul li a:hover:after {
   padding-bottom: 20%;
   padding-top: 14%;
   font-size: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .order img {
@@ -191,11 +197,13 @@ header nav ul li a:hover:after {
   margin-top: 3%;
   margin-bottom: 6%;
   padding-top: 10%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu .product {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 30px 20px;
   grid-column-gap: 20px;
   grid-row-gap: 30px;
@@ -238,6 +246,7 @@ header nav ul li a:hover:after {
   font-size: 40px;
   text-align: center;
   margin-bottom: 7%;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
 
@@ -421,8 +430,6 @@ header nav ul li a:hover:after {
 }
 
 @media screen and (max-width: 564px) {
-
-
   .home .kontenKiri {
     background-image: url("beranda4.png");
     margin-top: 26%;
@@ -446,8 +453,6 @@ header nav ul li a:hover:after {
     color: lightgray;
     text-align: center;
   }
-
-
 
   .foot {
     background-color: darkred;
