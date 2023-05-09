@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>MOMO</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,14 +23,17 @@
       rel="stylesheet"
     />
 
-    <link rel="Website icon"type="png" href="assets/Group 6.png">
+    <title>MOMO</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="Website icon" type="png" href="assets/Group 6.png" />
   </head>
 
   <body>
+    <script src="script.js"></script>
     <header>
       <nav>
         <div class="logodepan">
-          <img src="assets/logo.png" alt="">
+          <img src="assets/logo.png" alt="" />
         </div>
 
         <ul>
@@ -51,77 +52,64 @@
     </header>
 
     <main>
-      <!-- Home -->
-      <div class="home" id="home">
-        <div class="kontenKiri">
-          <h1>WElCOME TO <span class="homeMomo">MOMO</span></h1>
-          <p>OPEN FOR DELIVERY & PICK UP</p>
+      <div class="landing" id="home">
+        <h1>WELCOME TO MOMO</h1>
+        <h3>OPEN FOR DELIVERY AND PICKUP</h3>
+      </div>
+
+      <div class="about" id="about">
+        <h1>ABOUT</h1>
+        <div class="container">
+          <div class="isikonten">
+            <strong>Kenapa Harus Momo?</strong>
+            Karena Momo menyediakan ayam geprek dengan kualitas tinggi, yang
+            murah, dan juga higienis. Geprek Momo mengutamakan kenyamanan dan
+            kepuasan pelanggan.
+            <br />
+            <br />
+            Geprek Momo menyajikan masakan khas Indonesia dengan sentuhan
+            citarasa asia yang terbuat dari daging ayam yang digoreng krispi dan
+            dicampur dengan bumbu geprek yang pedas.
+            <br />
+          </div>
+
+          <div class="gambar">
+            <img src="assets/image2.png" alt="" />
+          </div>
         </div>
       </div>
 
-      <!-- About -->
-      <!-- <div class="about" id="about"></div> -->
-      <!-- Product -->
-      <!-- <div class="product" id="product"></div> -->
-      <!-- Service -->
-      <!-- <div class="gallery" id="gallery"></div> -->
-      <!-- Contact -->
-      <!-- <div class="contact" id="contact"></div> -->
-
-      <div class="about" id="about">
-          <h1>ABOUT</h1>
-          <div class="container">
-            <p>
-              <div class="gambar">
-                <img src="assets/image2.png" alt="">
-              </div>
-              <div class="isikonten">
-              <strong>Kenapa Harus Momo?</strong> 
-              Karena Momo menyediakan ayam geprek dengan kualitas tinggi, yang murah, dan juga higienis.
-              Geprek Momo mengutamakan kenyamanan dan kepuasan pelanggan.
-              <br>
-              <br>
-              Geprek Momo menyajikan masakan khas Indonesia dengan sentuhan citarasa
-              asia yang terbuat dari daging ayam yang digoreng krispi dan dicampur
-              dengan bumbu geprek yang pedas. Level kepedasan dari geprek momo juga dapat
-              diatur sesuai selera, mulai dari level 1 - 30 yang merupakan kepedasan maksimal
-              yang di tawarkan oleh geprek momo.
-              <br>
-            </div>
-    
-            </p>
-            </div>
-        </div>
-
       <div class="order" id="order">
-        <h1> WAY TO ORDER </h1> <br />
+        <h1>WAY TO ORDER</h1>
+        <br />
+        <div class="order-container">
           <div>
-            <div>
-              <a href="https://gofood.co.id/pontianak/restaurant/ayam-geprek-momo-sungai-raya-46f3fe03-cc8c-480b-8f56-5d73a2e56037" target="_blank">
-                <img src="assets/gojek.png" alt="" />
-                <p class="judul">Gojek</p>
-              </a>
-            </div>
-            <div>
-              <a href="https://wa.me/+6281351555523" target="_blank">
-                <img src="assets/wa.png" alt="" />
-                <p class="judul">Whatsapp</p>
-              </a>
-            </div>
-            <div>
-              <a href="#maps">
-                <img src="assets/toko.png" alt="" />
-                <p class="judul">Location</p>
-              </a>
-            </div>
+            <a
+              href="https://gofood.co.id/pontianak/restaurant/ayam-geprek-momo-sungai-raya-46f3fe03-cc8c-480b-8f56-5d73a2e56037"
+              target="_blank"
+            >
+              <img src="assets/gojek.png" alt="" />
+              <p class="judul">Gojek</p>
+            </a>
           </div>
+          <div>
+            <a href="https://wa.me/+6281351555523" target="_blank">
+              <img src="assets/wa.png" alt="" />
+              <p class="judul">Whatsapp</p>
+            </a>
           </div>
-        
+          <div>
+            <a href="#maps">
+              <img src="assets/toko.png" alt="" />
+              <p class="judul">Location</p>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="menu" id="product">
         <h1>PRODUCT</h1>
-        <section class="product">
+        <div class="menu-container">
           <div class="item">
             <img src="assets/item1.webp" alt="" />
             <h4>Paket Komplit 1</h4>
@@ -169,7 +157,7 @@
             <h4>Geprek Cheese</h4>
             <p>IDR 14K</p>
           </div>
-        </section>
+        </div>
       </div>
 
       <div class="gallery" id="gallery">
@@ -195,18 +183,33 @@
       </div>
 
       <div class="map">
-
         <h1>OUR LOCATION</h1>
-        <p id = "cabang1" >Cabang 1</p>
-        <br>
-        <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8150305734725!2d109.36445241413519!3d-0.07357729994631336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5a033e086e33%3A0xd3399c33e4132679!2sAyam%20Geprek%20Momo!5e0!3m2!1sid!2sid!4v1679211833097!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
-        <p id = "cabang2" >Cabang 2</p>
-        <br>
-        <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.81762766071!2d109.34139121475333!3d-0.03376199997536341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d596d4221c917%3A0xe3c747a8b3fe3feb!2sAyam%20Geprek%20Momo%20Ketapang!5e0!3m2!1sid!2sid!4v1679581998806!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p id="cabang1">Cabang 1</p>
+        <br />
+        <br />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8150305734725!2d109.36445241413519!3d-0.07357729994631336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5a033e086e33%3A0xd3399c33e4132679!2sAyam%20Geprek%20Momo!5e0!3m2!1sid!2sid!4v1679211833097!5m2!1sid!2sid"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          id="maps"
+        ></iframe>
+        <p id="cabang2">Cabang 2</p>
+        <br />
+        <br />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.81762766071!2d109.34139121475333!3d-0.03376199997536341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d596d4221c917%3A0xe3c747a8b3fe3feb!2sAyam%20Geprek%20Momo%20Ketapang!5e0!3m2!1sid!2sid!4v1679581998806!5m2!1sid!2sid"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
-
     </main>
 
     <footer class="foot" id="contact">
@@ -222,12 +225,16 @@
         <h2>Address</h2>
         <br />
         <p>Cabang 1</p>
-        <br>
-        <p> Jl.822 No.91, Sungai Raya, Kec, Sungai Raya, 
-        Kabupaten Kubu Raya, Kalimantan Barat</p>
+        <br />
+        <p>
+          Jl.822 No.91, Sungai Raya, Kec, Sungai Raya, Kabupaten Kubu Raya,
+          Kalimantan Barat
+        </p>
         <p>Cabang 2</p>
-        <p>Jl. Ketapang No.86d, Benua Melayu Darat, Kec. Pontianak Sel, 
-        Kota Pontianak, Kalimantan Barat 78122</p>
+        <p>
+          Jl. Ketapang No.86d, Benua Melayu Darat, Kec. Pontianak Sel, Kota
+          Pontianak, Kalimantan Barat 78122
+        </p>
       </div>
 
       <div class="part3">
