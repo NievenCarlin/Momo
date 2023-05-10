@@ -13,13 +13,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("assets/landing3.webp");
+  background-image: url("assets/landing2.avif");
   background-size: cover;
   filter: blur(10px);
 }
 
-.login-box {
-  background-color: #fff;
+.signup-box {
+  background-color: white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,24 +31,24 @@
   border-radius: 10px;
 }
 
-.login-box h1 {
+.signup-box h1 {
   color: black;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.login-box p {
+.signup-box p {
   color: black;
   text-align: center;
   margin-top: 60px;
   margin-bottom: -10px;
 }
 
-.login-box .user-box {
+.signup-box .user-box {
   position: relative;
 }
 
-.login-box .user-box input {
+.signup-box .user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -60,7 +60,7 @@
   background: transparent;
 }
 
-.login-box .user-box label {
+.signup-box .user-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,21 +71,21 @@
   transition: 0.5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.signup-box .user-box input:focus ~ label,
+.signup-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: lightgray;
   font-size: 12px;
 }
 
-.login-box form {
+.signup-box form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.login-box form a {
+.signup-box form a {
   text-align: center;
   position: relative;
   display: inline-block;
@@ -100,10 +100,10 @@
   letter-spacing: 4px;
 }
 
-#login-btn{
-  text-align: center;
+#signup-btn {
   background-color: transparent;
   border-color: transparent;
+  text-align: center;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -117,27 +117,16 @@
   letter-spacing: 4px;
 }
 
-.login-box a:hover {
+.signup-box a:hover {
   background: orange;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px orange, 0 0 25px orange, 0 0 50px orange, 0 0 100px orange;
 }
 
-#login-btn:hover {
+#signup-btn:hover {
   background: orange;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px orange, 0 0 25px orange, 0 0 50px orange, 0 0 100px orange;
 }
-
-.login-box a span {
-  position: absolute;
-  display: block;
-}
-
-#login-btn span {
-  position: absolute;
-  display: block;
-}
-

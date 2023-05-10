@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
     }
     
     if (nav.classList.contains('navbar-scrolled')) {
-      nav.style.color = "white";
+      nav.style.color = "black";
     } else {
       nav.style.color = "black";
     }

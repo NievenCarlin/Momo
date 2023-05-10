@@ -24,7 +24,7 @@
     />
 
     <title>MOMO</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="momo.css" />
     <link rel="Website icon" type="png" href="assets/Group 6.png" />
   </head>
 
@@ -182,33 +182,38 @@
         </div>
       </div>
 
-      <div class="map">
+      <div class="map" id="maps">
         <h1>OUR LOCATION</h1>
-        <p id="cabang1">Cabang 1</p>
-        <br />
-        <br />
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8150305734725!2d109.36445241413519!3d-0.07357729994631336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5a033e086e33%3A0xd3399c33e4132679!2sAyam%20Geprek%20Momo!5e0!3m2!1sid!2sid!4v1679211833097!5m2!1sid!2sid"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          id="maps"
-        ></iframe>
-        <p id="cabang2">Cabang 2</p>
-        <br />
-        <br />
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.81762766071!2d109.34139121475333!3d-0.03376199997536341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d596d4221c917%3A0xe3c747a8b3fe3feb!2sAyam%20Geprek%20Momo%20Ketapang!5e0!3m2!1sid!2sid!4v1679581998806!5m2!1sid!2sid"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="maps-container">
+          <div class="lokasi1">
+            <p id="cabang1">Cabang 1</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8150305734725!2d109.36445241413519!3d-0.07357729994631336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5a033e086e33%3A0xd3399c33e4132679!2sAyam%20Geprek%20Momo!5e0!3m2!1sid!2sid!4v1679211833097!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              id="maps1"
+            >
+            </iframe>
+          </div>
+
+          <div class="lokasi2">
+            <p id="cabang2">Cabang 2</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.81762766071!2d109.34139121475333!3d-0.03376199997536341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d596d4221c917%3A0xe3c747a8b3fe3feb!2sAyam%20Geprek%20Momo%20Ketapang!5e0!3m2!1sid!2sid!4v1679581998806!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              id="maps2"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </main>
 
