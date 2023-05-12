@@ -84,6 +84,10 @@ nav.navbar-scrolled #nav-login {
   background-color:  orange;
 }
 
+nav.navbar-scrolled #nav-login:hover {
+  background-color:  yellow;
+}
+
 #nav-login{
   background-color: white;
   font-weight: bold;
@@ -100,6 +104,10 @@ nav.navbar-scrolled #nav-login {
   transition: 0.5s;
   letter-spacing: 4px;
   border-radius: 10px;
+}
+
+#nav-login:hover{
+  background-color: yellow;
 }
 
 header nav ul li a:after {
@@ -146,6 +154,11 @@ header nav ul li a:hover:after {
   color: white;
   z-index: 1;
   font-size: 90px;
+  transition: 0.2s ease-in;
+}
+
+.landing h1:hover {
+  font-size: 100px;
 }
 
 .landing h3 {
@@ -185,6 +198,11 @@ header nav ul li a:hover:after {
   margin-right: 50px;
   margin-left: 50px;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  transition: 0.2s ease-in;
+}
+
+.about .gambar img:hover {
+  transform: scale(1.05);
 }
 
 .about strong {
@@ -221,6 +239,7 @@ header nav ul li a:hover:after {
 .order img {
   width: 150px;
   margin: 6% 8% 0% 8%;
+  transition: 0.2s ease-in;
 }
 
 .order img:hover {
@@ -255,13 +274,17 @@ header nav ul li a:hover:after {
   gap: 10px;
 }
 
-.menu .menu-container .item img:hover {
-  transform: scale(1.1);
-  filter: brightness(110%);
+.menu-container .item:hover {
+  transform: scale(1.03);
+  filter: brightness(105%);
+  border-color: orange;
+  border-width: 2px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
 .menu .menu-container .item {
   width: 300px;
+  transition: 0.2s ease-in;
 }
 
 .menu .menu-container .item img {
@@ -274,12 +297,13 @@ header nav ul li a:hover:after {
 .menu .menu-container .item h4 {
   font-size: 20px;
   margin: 5px 0;
+  text-align: center;
 }
 
 .menu .menu-container .item p {
-  font-size: 17px;
+  font-size: 20px;
   margin: 5px 0;
-  text-align: right;
+  text-align: center;
   color: green;
   font-weight: bolder;
 }
