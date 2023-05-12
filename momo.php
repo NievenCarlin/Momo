@@ -1,3 +1,8 @@
+<?php
+require "config/function.php";
+$produk = query("SELECT * FROM tbmenu");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,6 +50,8 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
 
+        <a href="index.php" id="nav-login">Login</a>
+        
         <div class="burger">
           <span class="material-symbols-outlined"> menu </span>
         </div>
@@ -110,54 +117,13 @@
       <div class="menu" id="product">
         <h1>PRODUCT</h1>
         <div class="menu-container">
+        <?php foreach ($produk as $row) : ?>
           <div class="item">
-            <img src="assets/item1.webp" alt="" />
-            <h4>Paket Komplit 1</h4>
-            <p>IDR 25K</p>
+            <img src="assets/<?php echo $row["gambar"]; ?>" width="300" alt="">
+            <h4><?php echo $row["nama"]; ?></h4>
+            <p><?php echo $row["harga"]; ?></p>
           </div>
-
-          <div class="item">
-            <img src="assets/item2.webp" alt="" />
-            <h4>Paket Komplit 2</h4>
-            <p>IDR 25K</p>
-          </div>
-
-          <div class="item">
-            <img src="assets/item3.webp" alt="" />
-            <h4>Geprek Rica-rica + Nasi</h4>
-            <p>IDR 16K</p>
-          </div>
-
-          <div class="item">
-            <img src="assets/item4.webp" alt="" />
-            <h4>Geprek Rica-rica</h4>
-            <p>IDR 13K</p>
-          </div>
-
-          <div class="item">
-            <img src="assets/item5.webp" alt="" />
-            <h4>Geprek Terasi + Nasi</h4>
-            <p>IDR 16K</p>
-          </div>
-
-          <div class="item">
-            <img src="assets/item6.webp" alt="" />
-            <h4>Geprek Terasi</h4>
-            <p>IDR 13K</p>
-          </div>
-
-          <div class="item">
-            <img src="assets/item7.webp" alt="" />
-            <h4>Geprek Cheese + Nasi</h4>
-            <p>IDR 17K</p>
-          </div>
-
-          <div class="item">
-            <img src="assets/item8.webp" alt="" />
-            <h4>Geprek Cheese</h4>
-            <p>IDR 14K</p>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
 
       <div class="gallery" id="gallery">

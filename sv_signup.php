@@ -3,7 +3,7 @@ include "config/connection.php";
 
 $username = $_POST['username'];
 $fullname = $_POST['fullname'];
-$password = md5($_POST['fullname']);
+$password = md5($_POST['password']);
 
 //untuk mengecek apakah username sudah ada atau belum
 $sql_check = "select * from tbuser where username='username' ";

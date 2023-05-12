@@ -20,7 +20,7 @@
 
           <div class="user-box">
             <input type="text" name="username" required="" id="username">
-            <label>E-mail</label>
+            <label>Username</label>
           </div>
 
           <div class="user-box">
