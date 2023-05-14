@@ -17,7 +17,7 @@ function tambah($data)
 {
     //ambil data dari tiap elemen dalam form
     global $conn;
-    $gambar = htmlspecialchars($data["gambar"]);
+    $gambar = $data["gambar"];
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
 

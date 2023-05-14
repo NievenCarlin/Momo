@@ -35,27 +35,30 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-    <h1>Tambah Menu</h1>
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="nama">Gambar : </label>
-                <input type="text" name="gambar" id="gambar" required>
-            </li>
-            <li>
+    <div class="bg"></div>
+
+    <div class="add">
+        <form action="" method="post">
+            <h1>ADD MENU</h1>
+            <div class="img-box">
+                <label for="gambar">Tap to add Picture</label>
+                <input type="file" name="gambar" id="gambar" required hidden>
+            </div>
+    
+            <div class="add-box">
                 <label for="nama">Nama : </label>
                 <input type="text" name="nama" id="nama" required>
-            </li>
-            <li>
+            </div>
+    
+            <div class="add-box">
                 <label for="harga">Harga : </label>
                 <input type="text" name="harga" id="harga" required>
-            </li>
-            <li>
-                <button type="submit" name="submit">Submit</button>
-            </li>
-        </ul>
-    </form>
+            </div>
+    
+            <button type="submit" name="submit" id="add-btn">Submit</button>
+        </form>
+    </div>
 </body>
 
 </html>

@@ -105,22 +105,23 @@ $produk = query("SELECT * FROM tbmenu");
 
     <div class="menu" id="product">
       <h1>PRODUCT</h1>
-      <div class="tambah-hapus">
-        <button type="button" class="btn-tambah"><a href="tambah.php">Tambah Menu</a></button>
-        <button type="button" class="btn-ubah"><a href="">Ubah</a></button>
-      </div>
       <div class="menu-container">
         <?php $i = 1; ?>
         <?php foreach ($produk as $row) : ?>
           <div class="item">
-            <p><?php echo $i; ?></p>
+            <p class = "menu-id"><?php echo $i; ?></p>
             <img src="assets/<?php echo $row["gambar"]; ?>" width="300" alt="">
             <h4><?php echo $row["nama"]; ?></h4>
             <p><?php echo $row["harga"]; ?></p>
             <button type="button" class="btn-hapus"> <a href="hapus.php?id=<?php echo $row["id"]; ?>">X</a></button>
+            <button type="button" class="btn-ubah"><a href="">Edit</a></button>
           </div>
           <?php $i++; ?>
         <?php endforeach; ?>
+        <div class="tambah-hapus">
+          <h2>ADD MENU</h2>
+          <button type="button" class="btn-tambah"><a href="tambah.php">+</a></button>
+        </div>
       </div>
     </div>
 
