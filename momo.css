@@ -267,6 +267,51 @@ header nav ul li a:hover:after {
   margin-bottom: 10px;
 }
 
+.tambah-hapus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn-tambah, .btn-ubah{
+  padding: 12px 24px; 
+  background-color: orange; 
+  border: none; 
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.2s ease-in;
+  font-weight: bold;
+}
+
+.btn-tambah:hover, .btn-ubah:hover{
+  transform: scale(1.05);
+  filter: brightness(90%);
+}
+
+.btn-tambah a, .btn-ubah a{
+  color: white;
+}
+
+.btn-hapus{
+  padding: 5px 10px;
+  background-color: red;
+  border: none;
+  transition: 0.2s ease-in;
+  border-radius: 7px;
+}
+
+.btn-hapus:hover{
+  transform: scale(1.05);
+  filter: brightness(90%);
+}
+
+.btn-hapus a{
+  color: white;
+  font-weight: bold  ;
+}
+
 .menu h1 {
   font-size: 40px;
   text-align: center;
