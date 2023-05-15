@@ -114,7 +114,7 @@ $produk = query("SELECT * FROM tbmenu");
             <h4><?php echo $row["nama"]; ?></h4>
             <p><?php echo $row["harga"]; ?></p>
             <button type="button" class="btn-hapus"> <a href="hapus.php?id=<?php echo $row["id"]; ?>">X</a></button>
-            <button type="button" class="btn-ubah"><a href="">Edit</a></button>
+            <button type="button" class="btn-ubah"><a href="ubah.php?id=<?php echo $row["id"]; ?>">Edit</a></button>
           </div>
           <?php $i++; ?>
         <?php endforeach; ?>
