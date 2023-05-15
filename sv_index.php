@@ -10,9 +10,15 @@ $query = mysqli_query($conn, $sql);
 $num = mysqli_num_rows($query);
 $result = mysqli_fetch_array($query);
 
-if($num == 0){
-    echo "Otentikasi gagal!";
-}else{
+if ($num == 0) {
+    echo "
+    <script>
+        alert('Otentikasi Gagal');
+        document.location.href = 'index.php';
+    </script>
+";
+    exit;
+} else {
     header("Location: momo.php");
     exit();
 }
