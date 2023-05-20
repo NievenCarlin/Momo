@@ -61,7 +61,7 @@ nav ul {
 }
 
 header nav ul li a {
-  color: white;
+  color:white;
   position: relative;
   text-decoration: none;
   font-weight: bold;
@@ -81,7 +81,7 @@ nav.navbar-scrolled a {
 }
 
 nav.navbar-scrolled #nav-login {
-  background-color: orange;
+  background-color:  orange;
 }
 
 nav.navbar-scrolled #nav-login:hover {
@@ -89,7 +89,7 @@ nav.navbar-scrolled #nav-login:hover {
   transform: scale(1.1);
 }
 
-#nav-login {
+#nav-login{
   background-color: orange;
   font-weight: bold;
   border-color: transparent;
@@ -107,7 +107,7 @@ nav.navbar-scrolled #nav-login:hover {
   border-radius: 10px;
 }
 
-#nav-login:hover {
+#nav-login:hover{
   filter: brightness(90%);
   transform: scale(1.1);
 }
@@ -251,7 +251,7 @@ header nav ul li a:hover:after {
 }
 
 .order img:hover {
-  transform: scale(1.2);
+   transform: scale(1.2);
 }
 
 .order p {
@@ -267,78 +267,6 @@ header nav ul li a:hover:after {
   margin-bottom: 10px;
 }
 
-.btn-ubah {
-  padding: 5px 20px;
-  background-color: green;
-  border: none;
-  transition: 0.2s ease-in;
-  border-radius: 7px;
-}
-
-.btn-ubah a {
-  color: white;
-  font-weight: bold;
-}
-
-.btn-ubah:hover {
-  transform: scale(1.05);
-  filter: brightness(90%);
-}
-
-.btn-hapus {
-  padding: 5px 10px;
-  background-color: red;
-  border: none;
-  transition: 0.2s ease-in;
-  border-radius: 7px;
-}
-
-.btn-hapus:hover {
-  transform: scale(1.05);
-  filter: brightness(90%);
-}
-
-.btn-hapus a {
-  color: white;
-  font-weight: bold;
-}
-
-.tambah-hapus {
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.tambah-hapus button {
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: orange;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  transition: 0.2s ease-in;
-}
-
-.tambah-hapus button:hover {
-  transform: scale(1.05);
-  filter: brightness(130%);
-}
-
-.tambah-hapus a {
-  font-size: 150px;
-  color: white;
-}
-
-.tambah-hapus h2{
-  margin-bottom: 30px;
-  font-size: 30px;
-}
-
 .menu h1 {
   font-size: 40px;
   text-align: center;
@@ -352,10 +280,6 @@ header nav ul li a:hover:after {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.menu-id {
-  display: none;
 }
 
 .menu-container .item:hover {
@@ -398,7 +322,7 @@ header nav ul li a:hover:after {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.gallery {
+.gallery{
   overflow: hidden;
 }
 
@@ -437,19 +361,19 @@ header nav ul li a:hover:after {
   filter: brightness(120%);
 }
 
-.map {
+.map{
   margin-top: 200px;
   background-color: darkred;
   padding: 100px;
 }
 
-.map h1 {
+.map h1{
   text-align: center;
   color: white;
   margin-bottom: 50px;
 }
 
-.map p {
+.map p{
   text-align: center;
   margin: 20px 0;
   font-weight: bold;
