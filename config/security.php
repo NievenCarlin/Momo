@@ -1,12 +1,11 @@
 <?php
+session_start();
 
-include "config/security.php";
-
-if (!issset($_SESSION['uname'])) {
+if (!isset($_SESSION['fname'])) {
     ?>
     <script>
-        alert("silahkan login dulu!");
-        location.href = "index.php";
+        alert("Silahkan login dulu!");
+        location.href = "login.php";
     </script>
     <?php
 }

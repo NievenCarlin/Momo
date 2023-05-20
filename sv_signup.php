@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "config/connection.php";
 
 $username = $_POST['username'];
@@ -17,14 +16,11 @@ if($num_check == 0) { //artinya username belum ada di db
 ?>
 <script>
     alert("Data berhasil di registrasi");
-    location.href = "index.php";
+    location.href = "login.php";
 </script>
 
 <?php
 }else{ //artinya username tersebut sudah ada di db
-    $_SESSION ['uname'] = $username; //registrasi session untuk username
-    $_SESSION['fname'] = $result ['fullname']; //registrasi session untuk fullname
-    //echo "hello, ".$result['fullname']."!";
 ?>
 <script>
     alert("Username sudah ada");
