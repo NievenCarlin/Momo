@@ -20,7 +20,7 @@ if ($num == 0) {
 } else {
     ?>
     <script>
-        document.location.href = 'user.php';
+        document.location.href = 'index.php';
     </script>
     <?php
     $_SESSION['uname'] = $username;
@@ -29,5 +29,5 @@ if ($num == 0) {
 ?>
 
 <script>
-    location.href = momo.php;
+    location.href = index.php;
 </script>

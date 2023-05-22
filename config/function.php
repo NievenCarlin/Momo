@@ -41,6 +41,14 @@ function hapus($id)
     return mysqli_affected_rows($conn);
 }
 
+function hapus_user($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM tbuser WHERE id=$id");
+
+    return mysqli_affected_rows($conn);
+}
+
 function ubah($data)
 {
     //ambil data dari tiap elemen dalam form

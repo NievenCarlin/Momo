@@ -38,8 +38,8 @@
         Sign Up
         <input type="hidden" name="signup" value="Sign Up">
       </a>
-      <a href="adm_login.php" id="adm_link">You're an Admin?</a>
     </form>
+    <a href="adm_login.php" id="adm-link">You're an Admin?</a>
 
   </div>
 </body>
