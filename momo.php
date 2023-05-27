@@ -21,23 +21,44 @@ $produk = query("SELECT * FROM tbmenu");
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 
+  <script src="https://kit.fontawesome.com/5e1bfe2daf.js" crossorigin="anonymous"></script>
   <title>Admin Page</title>
   <link rel="stylesheet" href="momo.css" />
   <link rel="Website icon" type="png" href="assets/Group 6.png" />
 </head>
 
 <body id="home">
+<div class="nav-container">
+  <nav>
+    <div class="logodepan">
+      <img src="assets/logo.png" alt="" />
+    </div>
+
+    <div class="btn-contain">
+    <ul>
+      <li><a href="index.php">CHECK</a></li>
+    </ul>
+
+    <button id="nav-logout"><a href="login.php">LOGOUT</a></button>
+    </div>
+    
+  </nav>
 
   <div class="sidebar">
     <ul>
-      <li><a href="#" class="active">Menu</a></li>
-      <li><a href="momo-user.php">User</a></li>
+      <li><a href="#" class="active"><i class="fas fa-bars"></i>Menu</a></li>
+      <li><a href="momo-user.php"><i class="fas fa-user"></i>User</a></li>
     </ul>
   </div>
-  
+</div>
+
   <div class="menu" id="product">
     <h1>EDIT PRODUCT</h1>
     <div class="menu-container">
+      <div class="tambah-hapus">
+        <h2>ADD MENU</h2>
+        <button type="button" class="btn-tambah"><a href="tambah.php">+</a></button>
+      </div>
       <?php $i = 1; ?>
       <?php foreach ($produk as $row) : ?>
         <div class="item">
@@ -52,10 +73,6 @@ $produk = query("SELECT * FROM tbmenu");
         </div>
         <?php $i++; ?>
       <?php endforeach; ?>
-      <div class="tambah-hapus">
-        <h2>ADD MENU</h2>
-        <button type="button" class="btn-tambah"><a href="tambah.php">+</a></button>
-      </div>
     </div>
   </div>
 </body>

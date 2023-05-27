@@ -28,11 +28,23 @@ $produk = query("SELECT * FROM tbuser");
 
 <body id="home">
 
-    <div class="sidebar">
-        <ul>
-            <li><a href="momo.php" class="active">Menu</a></li>
-            <li><a href="#">User</a></li>
-        </ul>
+    <div class="nav-container">
+        <nav>
+            <div class="logodepan">
+                <img src="assets/logo.png" alt="" />
+            </div>
+
+            <div class="btn-contain">
+                <button id="nav-logout"><a href="login.php">LOGOUT</a></button>
+            </div>
+        </nav>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="momo.php" class="active"><i class="fas fa-bars"></i>Menu</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>User</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="table-user">
