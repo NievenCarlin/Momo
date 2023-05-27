@@ -94,6 +94,30 @@ nav img{
   font-weight: bold;
 }
 
+#add-user{
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: orange;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#add-user:hover{
+  filter: brightness(90%);
+  transform: scale(1.1);
+}
+
+#add-user a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
 #nav-logout:hover{
   filter: brightness(90%);
   transform: scale(1.1);
@@ -328,8 +352,14 @@ nav img{
   background-color: #eaeaea;
 }
 
-.table-user td a {
+.red-link{
   color: red;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.grn-link{
+ font-weight: bold;
+ text-decoration: none;
+  color: green;
 }

@@ -21,6 +21,7 @@ $produk = query("SELECT * FROM tbuser");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 
+    <script src="https://kit.fontawesome.com/5e1bfe2daf.js" crossorigin="anonymous"></script>
     <title>Admin Page</title>
     <link rel="stylesheet" href="momo.css" />
     <link rel="Website icon" type="png" href="assets/Group 6.png" />
@@ -63,7 +64,8 @@ $produk = query("SELECT * FROM tbuser");
                 <tr>
                     <td style="text-align: center;"><?php echo $i; ?></td>
                     <td style="text-align: center;">
-                        <a href="hapus-user.php?id=<?php echo $row["id"]; ?>">BAN</a>
+                        <a href="hapus-user.php?id=<?php echo $row["id"]; ?>" class="red-link">BAN</a> | 
+                        <a href="ubah-user.php?id=<?php echo $row["id"]; ?>" class="grn-link">EDIT</a>
                     </td>
                     <td style="text-align: left;"><?php echo $row["username"]; ?></td>
                     <td style="text-align: left;"><?php echo $row["fullname"]; ?></td>
@@ -72,6 +74,7 @@ $produk = query("SELECT * FROM tbuser");
                 <?php $i++; ?>
             <?php endforeach; ?>
         </table>
+        <button id="add-user"><a href="signup.php">ADD USER</a></button>
     </div>
 
 

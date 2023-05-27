@@ -70,3 +70,23 @@ function ubah($data)
 
     return mysqli_affected_rows($conn);
 }
+
+function ubah_user($data)
+{
+    //ambil data dari tiap elemen dalam form
+    global $conn;
+    $id = $data["id"];
+    $username = htmlspecialchars ($data["username"]);
+    $fullname = htmlspecialchars($data["fullname"]);
+
+    //query insert data
+    $query = "UPDATE tbuser SET
+                username = '$username',
+                fullname = '$fullname'
+            WHERE id = $id
+            ";
+
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
