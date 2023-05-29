@@ -3,7 +3,7 @@
 $user = "root";
 $server = "localhost";
 $password = "";
-$db = "momodb";
+$db = "momo";
 
 $conn = mysqli_connect($server, $user, $password, $db);
 

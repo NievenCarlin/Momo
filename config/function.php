@@ -1,7 +1,7 @@
 <?php
 
 //koneksi database
-$conn = mysqli_connect("localhost", "root", "", "momodb");
+$conn = mysqli_connect("localhost", "root", "", "momo");
 
 function query($query)
 {
@@ -54,7 +54,7 @@ function ubah($data)
     //ambil data dari tiap elemen dalam form
     global $conn;
     $id = $data["id"];
-    $gambar = htmlspecialchars ($data["gambar"]);
+    $gambar = htmlspecialchars($data["gambar"]);
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
 
@@ -76,7 +76,7 @@ function ubah_user($data)
     //ambil data dari tiap elemen dalam form
     global $conn;
     $id = $data["id"];
-    $username = htmlspecialchars ($data["username"]);
+    $username = htmlspecialchars($data["username"]);
     $fullname = htmlspecialchars($data["fullname"]);
 
     //query insert data

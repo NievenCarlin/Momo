@@ -36,7 +36,13 @@ $produk = query("SELECT * FROM tbuser");
             </div>
 
             <div class="btn-contain">
-                <button id="nav-logout"><a href="login.php">LOGOUT</a></button>
+            <button onclick="logout()" id="nav-logout">LOGOUT</button>
+            <script>
+                function logout() {
+                    alert("You Want to Logout?");
+                    location.href = "logout.php";
+                }
+            </script>
             </div>
         </nav>
 

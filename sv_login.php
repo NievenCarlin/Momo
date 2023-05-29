@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 include "config/connection.php";
 
 $username = $_POST['username'];
@@ -11,20 +11,20 @@ $num = mysqli_num_rows($query);
 $result = mysqli_fetch_array($query);
 
 if ($num == 0) {
-    ?> 
+?>
     <script>
         alert('Otentikasi Gagal');
         document.location.href = 'login.php';
     </script>
-    <?php
+<?php
 } else {
-    ?>
+?>
     <script>
-        document.location.href = 'index.php';
+        document.location.href = 'afterLogin.php';
     </script>
-    <?php
-    $_SESSION['uname'] = $username;
-    $_SESSION['fname'] = $result['fullname'];
+<?php
+    // $_SESSION['uname'] = $username;
+    // $_SESSION['fname'] = $result['fullname'];
 }
 ?>
 

@@ -157,6 +157,21 @@
   box-shadow: none;
 }
 
+.login-box a{
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+.login-box a:hover{
+  color: orange;
+  background-color: white;
+  box-shadow: none;
+}
+
+
+
 
 
 

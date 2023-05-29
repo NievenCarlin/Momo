@@ -43,14 +43,13 @@ $produk = query("SELECT * FROM tbmenu");
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="login.php" id="nav-login">Login</a>
-            <!-- <button onclick="logout()" id="nav-logout">Logout</button>
+            <button onclick="logout()" id="nav-logout">Logout</button>
             <script>
                 function logout() {
                     alert("You Want to Logout?");
                     location.href = "logout.php";
                 }
-            </script> -->
+            </script>
 
             <div class="burger">
                 <span class="material-symbols-outlined"> menu </span>

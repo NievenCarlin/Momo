@@ -11,18 +11,18 @@ $num = mysqli_num_rows($query);
 $result = mysqli_fetch_array($query);
 
 if ($num == 0) {
-    ?> 
+?>
     <script>
         alert('Otentikasi Gagal');
         document.location.href = 'adm_login.php';
     </script>
-    <?php
+<?php
 } else {
-    ?>
+?>
     <script>
         document.location.href = 'momo.php';
     </script>
-    <?php
+<?php
     $_SESSION['uname'] = $username;
 }
 ?>

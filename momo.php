@@ -28,29 +28,35 @@ $produk = query("SELECT * FROM tbmenu");
 </head>
 
 <body id="home">
-<div class="nav-container">
-  <nav>
-    <div class="logodepan">
-      <img src="assets/logo.png" alt="" />
+  <div class="nav-container">
+    <nav>
+      <div class="logodepan">
+        <img src="assets/logo.png" alt="" />
+      </div>
+
+      <div class="btn-contain">
+        <ul>
+          <li><a href="index.php">CHECK</a></li>
+        </ul>
+
+        <button onclick="logout()" id="nav-logout">LOGOUT</button>
+        <script>
+          function logout() {
+            alert("You Want to Logout?");
+            location.href = "logout.php";
+          }
+        </script>
+      </div>
+
+    </nav>
+
+    <div class="sidebar">
+      <ul>
+        <li><a href="#" class="active"><i class="fas fa-bars"></i>Menu</a></li>
+        <li><a href="momo-user.php"><i class="fas fa-user"></i>User</a></li>
+      </ul>
     </div>
-
-    <div class="btn-contain">
-    <ul>
-      <li><a href="index.php">CHECK</a></li>
-    </ul>
-
-    <button id="nav-logout"><a href="login.php">LOGOUT</a></button>
-    </div>
-    
-  </nav>
-
-  <div class="sidebar">
-    <ul>
-      <li><a href="#" class="active"><i class="fas fa-bars"></i>Menu</a></li>
-      <li><a href="momo-user.php"><i class="fas fa-user"></i>User</a></li>
-    </ul>
   </div>
-</div>
 
   <div class="menu" id="product">
     <h1>EDIT PRODUCT</h1>

@@ -42,7 +42,7 @@
 
         <form action="index.php">
         <p>Already have an account?</p>
-        <a href="index.php">
+        <a href="login.php">
             Log In
             <input type="hidden" name="login" value="Log In">
         </a>

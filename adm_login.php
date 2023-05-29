@@ -29,8 +29,9 @@
         <label>Password</label>
       </div>
 
-      <input type="submit" value="Log in" id="login-btn" onclick="checkLogin()">
+      <input type="submit" value="Log in" id="login-btn">
     </form>
+    <a href="login.php" class="back">Go Back</a>
   </div>
 </body>
 
