@@ -8,26 +8,34 @@ $id = $_GET["id"];
 $dtmenu = query("SELECT * FROM tbmenu WHERE id = $id")[0];
 
 //cek apakah tombol submit sudah ditekan
+// ...
 if (isset($_POST["submit"])) {
-    //cek apakah data berhasil diubah atau tidak
-    if (ubah($_POST) > 0) {
-        echo "
-            <script>
-                alert('Menu Berhasil Diubah');
-                document.location.href = 'momo.php';
-            </script>
-        ";
-        exit;
-    } else {
-        echo "
-        <script>
-            alert('Menu Gagal Diubah');
-            document.location.href = 'momo.php';
-        </script>
-        ";
-        exit;
+    // Cek apakah ada gambar yang diunggah
+    if (isset($_FILES["gambar"])) {
+        $gambar = $_FILES["gambar"];
+
+        // Cek apakah data berhasil diubah atau tidak
+        if (ubah($_POST, $gambar) > 0) {
+            echo "
+                <script>
+                    alert('Menu Berhasil Diubah');
+                    document.location.href = 'momo.php';
+                </script>
+            ";
+            exit;
+        } else {
+            echo "
+                <script>
+                    alert('Menu Gagal Diubah');
+                    document.location.href = 'momo.php';
+                </script>
+            ";
+            exit;
+        }
     }
 }
+// ...
+
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +54,12 @@ if (isset($_POST["submit"])) {
     <div class="bg"></div>
 
     <div class="add">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <h1>CHANGE MENU</h1>
             <input type="hidden" name="id" value="<?= $dtmenu["id"]; ?>">
             <div class="img-box">
                 <label for="gambar">Add New Image</label>
-                <input type="file" hidden name="gambar" id="gambar" value="<?= $dtmenu["gambar"]; ?>">
+                <input type="file" name="gambar" id="gambar" hidden>
             </div>
     
             <div class="add-box">

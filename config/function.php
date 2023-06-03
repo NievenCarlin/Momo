@@ -29,7 +29,7 @@ function tambah($data)
         
         // Generate nama file baru
         $ext = pathinfo($gambarName, PATHINFO_EXTENSION); // Dapatkan ekstensi file gambar
-        $gambarNewName = "test." . $ext; // Ubah nama file menjadi "test" dengan ekstensi yang sama
+        $gambarNewName = uniqid() . "." . $ext; // Menghasilkan nama file unik dengan ekstensi yang sama
         
         $gambar = $targetDir . $gambarNewName; // Gabungkan direktori tujuan dengan nama file baru
 
@@ -53,7 +53,6 @@ function tambah($data)
         return mysqli_affected_rows($conn);
     }
 }
-
 
 // function tambah($data)
 // {
@@ -92,25 +91,67 @@ function hapus_user($id)
 
 function ubah($data)
 {
-    //ambil data dari tiap elemen dalam form
     global $conn;
     $id = $data["id"];
-    $gambar = htmlspecialchars($data["gambar"]);
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
 
-    //query insert data
-    $query = "UPDATE tbmenu SET
-                gambar = '$gambar',
-                nama = '$nama',
-                harga = '$harga'
-            WHERE id = $id
-            ";
+    // cek apakah ada file yang diunggah
+    if (isset($_FILES["gambar"]["tmp_name"]) && !empty($_FILES["gambar"]["tmp_name"])) {
+        $targetDir = "assets/img/";
+        $gambarName = basename($_FILES["gambar"]["name"]);
+        $ext = pathinfo($gambarName, PATHINFO_EXTENSION);
+        $gambarNewName = uniqid() . "." . $ext;
+        $gambar = $targetDir . $gambarNewName;
 
-    mysqli_query($conn, $query);
+        if (move_uploaded_file($_FILES["gambar"]["tmp_name"], $gambar)) {
+            // Update nama file gambar dalam kolom gambar di database
+            $query = "UPDATE tbmenu SET
+                        gambar = '$gambarNewName',
+                        nama = '$nama',
+                        harga = '$harga'
+                    WHERE id = $id";
+            mysqli_query($conn, $query);
 
-    return mysqli_affected_rows($conn);
+            return mysqli_affected_rows($conn);
+        } else {
+            echo "Gagal mengunggah gambar.";
+            return 0;
+        }
+    } else {
+        // Jika tidak ada gambar yang diunggah, update hanya nama dan harga
+        $query = "UPDATE tbmenu SET
+                    nama = '$nama',
+                    harga = '$harga'
+                WHERE id = $id";
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
 }
+
+
+// function ubah($data)
+// {
+//     //ambil data dari tiap elemen dalam form
+//     global $conn;
+//     $id = $data["id"];
+//     $gambar = htmlspecialchars($data["gambar"]);
+//     $nama = htmlspecialchars($data["nama"]);
+//     $harga = htmlspecialchars($data["harga"]);
+
+//     //query insert data
+//     $query = "UPDATE tbmenu SET
+//                 gambar = '$gambar',
+//                 nama = '$nama',
+//                 harga = '$harga'
+//             WHERE id = $id
+//             ";
+
+//     mysqli_query($conn, $query);
+
+//     return mysqli_affected_rows($conn);
+// }
 
 function ubah_user($data)
 {
