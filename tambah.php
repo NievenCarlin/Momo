@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
     <div class="bg"></div>
 
     <div class="add">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <h1>ADD MENU</h1>
             <div class="img-box">
                 <label for="gambar">Tap to add Picture</label>

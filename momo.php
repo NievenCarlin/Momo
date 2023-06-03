@@ -69,11 +69,11 @@ $produk = query("SELECT * FROM tbmenu");
       <?php foreach ($produk as $row) : ?>
         <div class="item">
           <p class="menu-id"><?php echo $i; ?></p>
-          <img src="assets/<?php echo $row["gambar"]; ?>" width="300" alt="">
+          <img src="assets/img/<?php echo $row["gambar"]; ?>" width="300" alt="">
           <h4><?php echo $row["nama"]; ?></h4>
           <p><?php echo $row["harga"]; ?></p>
           <div class="btn">
-            <button type="button" class="btn-hapus"> <a href="hapus.php?id=<?php echo $row["id"]; ?>">Delete</a></button>
+            <button type="button" class="btn-hapus"><a href="hapus.php?id=<?php echo $row["id"]; ?>">Delete</a></button>
             <button type="button" class="btn-ubah"><a href="ubah.php?id=<?php echo $row["id"]; ?>">Edit</a></button>
           </div>
         </div>

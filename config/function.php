@@ -16,22 +16,63 @@ function query($query)
 
 function tambah($data)
 {
-    //ambil data dari tiap elemen dalam form
+    // ambil data dari tiap elemen dalam form
     global $conn;
-    $gambar = $data["gambar"];
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
 
-    //query insert data
-    $query = "INSERT INTO tbmenu
-        VALUES
-    ('', '$gambar', '$nama', '$harga')
-    ";
+    // cek apakah ada file yang diunggah
+    if (isset($_FILES["gambar"]["tmp_name"]) && !empty($_FILES["gambar"]["tmp_name"])) {
+        // Tentukan lokasi tujuan penyimpanan gambar
+        $targetDir = "assets/img/";
+        $gambarName = basename($_FILES["gambar"]["name"]); // Dapatkan nama asli file gambar
+        
+        // Generate nama file baru
+        $ext = pathinfo($gambarName, PATHINFO_EXTENSION); // Dapatkan ekstensi file gambar
+        $gambarNewName = "test." . $ext; // Ubah nama file menjadi "test" dengan ekstensi yang sama
+        
+        $gambar = $targetDir . $gambarNewName; // Gabungkan direktori tujuan dengan nama file baru
 
-    mysqli_query($conn, $query);
+        // Pindahkan file yang diunggah ke lokasi tujuan
+        if (move_uploaded_file($_FILES["gambar"]["tmp_name"], $gambar)) {
+            // Query insert data dengan menyimpan path gambar
+            $query = "INSERT INTO tbmenu (gambar, nama, harga) VALUES ('$gambarNewName', '$nama', '$harga')";
+            mysqli_query($conn, $query);
 
-    return mysqli_affected_rows($conn);
+            return mysqli_affected_rows($conn);
+        } else {
+            // Jika gagal mengunggah gambar, tampilkan pesan error
+            echo "Gagal mengunggah gambar.";
+            return 0;
+        }
+    } else {
+        // jika tidak ada file yang diunggah, jalankan query insert data tanpa gambar
+        $query = "INSERT INTO tbmenu (nama, harga) VALUES ('$nama', '$harga')";
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
 }
+
+
+// function tambah($data)
+// {
+//     //ambil data dari tiap elemen dalam form
+//     global $conn;
+//     $gambar = $data["gambar"];
+//     $nama = htmlspecialchars($data["nama"]);
+//     $harga = htmlspecialchars($data["harga"]);
+
+//     //query insert data
+//     $query = "INSERT INTO tbmenu
+//         VALUES
+//     ('', '$gambar', '$nama', '$harga')
+//     ";
+
+//     mysqli_query($conn, $query);
+
+//     return mysqli_affected_rows($conn);
+// }
 
 function hapus($id)
 {
