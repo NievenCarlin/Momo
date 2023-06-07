@@ -1,0 +1,64 @@
+# Momo - Readme
+
+## Description
+
+Momo is a website designed to introduce a restaurant that specializes in serving "Ayam Geprek". 
+The website consists of multiple pages that provide information to users about the menu offerings, location of the restaurant, photo gallery, and general information about the establishment. Additionally, there is an admin page that is protected by security measures, where only authorized administrators can access it using a unique username and password. The admin has the ability to modify menu images, prices, and names, as well as the ability to ban users who log into the website. The website is built using HTML5, CSS3, PHP, a database system, and JavaScript.
+
+## Features
+
+1. Landing Page:
+   - Users can view the menu items available at the restaurant.
+   - Users can find the location of the restaurant.
+   - Users can explore the photo gallery showcasing the restaurant and its dishes.
+   - Users can read about the background and story of the restaurant.
+
+2. Admin Page:
+   - Only authorized administrators can access the admin page with a unique username and password.
+   - Admins can update the menu images, prices, and names to keep them up-to-date.
+   - Admins can ban users who violate the website's terms of service or engage in inappropriate behavior.
+
+## Technologies Used
+
+The Momo website is built using the following technologies:
+
+- HTML5: For structuring the web pages.
+- CSS3: For styling the website and making it visually appealing.
+- PHP: Used for server-side scripting and handling dynamic content.
+- Database: Utilized to store and manage menu information, user data, and administrative privileges.
+- JavaScript: Employed to add interactivity and enhance user experience.
+
+## Installation
+
+To run the Momo website locally, follow these steps:
+
+1. Clone the repository from GitHub: `git clone <https://github.com/NievenCarlin/Momo.git>`
+2. Set up a local development environment with a web server (e.g., Apache) and PHP support.
+3. Import the provided database into your chosen database management system (e.g., MySQL).
+4. Update the database configuration settings in the PHP files to match your local environment.
+5. Access the website through your web browser by entering the local server's URL.
+
+Note: Make sure you have the necessary prerequisites installed, such as a web server, PHP, and a supported database management system.
+
+## Usage
+
+- Upon accessing the Momo website, users will land on the homepage where they can browse the menu items, view the restaurant's location, explore the photo gallery, and learn more about the restaurant.
+- Admins can access the admin page by logging in using their unique username and password. From there, they can update menu images, prices, and names, as well as manage user bans if necessary.
+
+## Contributing
+
+Thank you for considering contributing to the Momo website. If you would like to contribute, please follow these guidelines:
+
+1. Fork the repository on GitHub.
+2. Make your desired changes in a new branch.
+3. Test your changes to ensure they work as intended.
+4. Submit a pull request, describing the changes you made and the purpose behind them.
+5. Your contributions will be reviewed, and upon approval, they will be merged into the main repository.
+
+## License
+
+The Momo website is open source and is available under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and use the code as per the terms of the license.
+
+## Contact
+
+If you have any questions, suggestions, or feedback, please feel free to contact us at darren.steven@itbss.ac.id or nieven.carlin@itbss.ac.id
