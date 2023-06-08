@@ -17,6 +17,7 @@ The website consists of multiple pages that provide information to users about t
    - Only authorized administrators can access the admin page with a unique username and password.
    - Admins can update the menu images, prices, and names to keep them up-to-date.
    - Admins can ban users who violate the website's terms of service or engage in inappropriate behavior.
+   - The admin page features a session that enables the admin to remain logged in without the need for subsequent logins.
 
 ## Technologies Used
 
